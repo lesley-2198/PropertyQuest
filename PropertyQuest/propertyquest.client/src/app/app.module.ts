@@ -9,6 +9,7 @@ import { BuyComponent } from './buy/buy.component';
 import { RentComponent } from './rent/rent.component';
 import { SellComponent } from './sell/sell.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
   ],
   imports: [
     BrowserModule, HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
