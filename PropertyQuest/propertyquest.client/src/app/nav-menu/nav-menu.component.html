@@ -1,9 +1,8 @@
 <header>
-  <a [routerLink]="['/']">Home</a>
-  |
-  <a [routerLink]="['/buy']">Buy</a>
-  |
-  <a [routerLink]="['/rent']">Rent</a>
-  |
-  <a [routerLink]="['/sell']">Sell</a>
+  <mat-toolbar color="primary">
+    <button mat-flat-button color="primary" [routerLink]="['/']">Home</button>
+    <button mat-flat-button color="primary" [routerLink]="['/buy']">Buy</button>
+    <button mat-flat-button color="primary" [routerLink]="['/rent']">Rent</button>
+    <button mat-flat-button color="primary" [routerLink]="['/sell']">Sell</button>
+  </mat-toolbar>
 </header>
