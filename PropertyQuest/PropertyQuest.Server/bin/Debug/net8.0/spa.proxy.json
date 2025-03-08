@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:54357",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\lesle\\source\\repos\\PropertyQuest\\PropertyQuest\\PropertyQuest.Server\\..\\propertyquest.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

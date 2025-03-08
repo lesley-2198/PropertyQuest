@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "S/MpUehnjhmg39uKUx+krH1fr+HdF3RsqhJM7/24tnk=",
+  "Source": "PropertyQuest.Server",
+  "BasePath": "_content/PropertyQuest.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\lesle\\source\\repos\\PropertyQuest\\PropertyQuest\\propertyquest.client\\propertyquest.client.esproj",
+      "Version": 2,
+      "Source": "propertyquest.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

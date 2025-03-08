@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "propertyquest.client", "propertyquest.client\propertyquest.client.esproj", "{5DFCC92D-3F1E-DBF1-0C90-81D085C23C6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyQuest.Server", "PropertyQuest.Server\PropertyQuest.Server.csproj", "{FFD1FA62-51C1-4E91-A80B-FC2B6DA0354F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DFCC92D-3F1E-DBF1-0C90-81D085C23C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFCC92D-3F1E-DBF1-0C90-81D085C23C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFCC92D-3F1E-DBF1-0C90-81D085C23C6D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5DFCC92D-3F1E-DBF1-0C90-81D085C23C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFCC92D-3F1E-DBF1-0C90-81D085C23C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFCC92D-3F1E-DBF1-0C90-81D085C23C6D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FFD1FA62-51C1-4E91-A80B-FC2B6DA0354F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD1FA62-51C1-4E91-A80B-FC2B6DA0354F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD1FA62-51C1-4E91-A80B-FC2B6DA0354F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD1FA62-51C1-4E91-A80B-FC2B6DA0354F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E8F5411-583F-4A96-87C3-BBF13CAC0525}
+	EndGlobalSection
+EndGlobal
