@@ -1,8 +1,12 @@
 <header>
-  <mat-toolbar color="primary">
-    <button mat-flat-button color="primary" [routerLink]="['/']">Home</button>
-    <button mat-flat-button color="primary" [routerLink]="['/buy']">Buy</button>
-    <button mat-flat-button color="primary" [routerLink]="['/rent']">Rent</button>
-    <button mat-flat-button color="primary" [routerLink]="['/sell']">Sell</button>
+  <mat-toolbar class="toolbar">
+    <button mat-flat-button class="home" [routerLink]="['/']">
+      <img src="assets/img/logo.png" alt="Home Icon" class="home-icon">
+      <p>Property Quest</p>
+    </button>
+    <span class="spacer"></span>
+    <button mat-flat-button [routerLink]="['/buy']">Buy</button>
+    <button mat-flat-button [routerLink]="['/rent']">Rent</button>
+    <button mat-flat-button [routerLink]="['/sell']">Sell</button>
   </mat-toolbar>
 </header>

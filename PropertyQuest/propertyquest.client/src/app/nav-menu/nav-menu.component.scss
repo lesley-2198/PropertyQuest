@@ -1,0 +1,42 @@
+.toolbar {
+  height: 70px;
+  background-color: rgb(221,161,94);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.toolbar button {
+  background-color: rgb(221,161,94);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(0,21,36);
+}
+
+.home {
+  margin-left: auto; // Moves the Home button to the left
+  font-size: 30px;
+  font-weight: 700;
+  height: 65px;
+  display: flex;
+  display: flex; // Ensures that child elements are aligned horizontally
+  align-items: center; // Aligns child elements vertically in the center
+}
+
+.home p {
+    margin: 0;
+  display: inline;
+  color: rgb(0,21,36);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.home-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 8px;
+}
+
+.spacer {
+  flex: 1 1 auto; // Takes up remaining space to push other buttons to the right
+}
