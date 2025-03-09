@@ -15,6 +15,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import { MatMenuModule } from '@angular/material/menu';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule, // Needed for ngModel
+    FormsModule,
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    MatInputModule, // For the input field
-    MatFormFieldModule, // For the form field
-    MatMenuModule
+    MatInputModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

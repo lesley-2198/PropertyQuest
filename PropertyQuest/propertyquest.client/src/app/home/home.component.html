@@ -1,14 +1,17 @@
 <body>
   <div class="container">
-    <img src="assets/img/landing-image.png" class="landing-image" alt="Landing Image">
+    <img src="assets/img/home-page/landing-image.png" class="landing-image" alt="Landing Image">
+
     <div class="text-overlay">
       <h1>Welcome to Property Quest</h1>
       <p>Your Dream Home Awaits</p>
+
       <div class="search-bar">
         <mat-form-field>
           <mat-label>City</mat-label>
           <input matInput placeholder="Enter city" [(ngModel)]="city">
         </mat-form-field>
+
         <div class="button-group">
           <button mat-raised-button color="primary" (click)="search('rent')">Rent</button>
           <button mat-raised-button color="accent" (click)="search('buy')">Buy</button>
@@ -16,4 +19,54 @@
       </div>
     </div>
   </div>
+
+  <div class="card-container">
+    <mat-grid-list cols="3" rowHeight="1:1">
+      <mat-grid-tile>
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Buy Property</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/home-page/for-sale.jpg" alt="Buy Property">
+          <mat-card-content>
+            <p>Find the best properties to buy.</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-button [routerLink]="['/buy']">Learn More</a>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Rent Property</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/home-page/to-rent.jpg" alt="Rent Property">
+          <mat-card-content>
+            <p>Discover rental properties.</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-button [routerLink]="['/rent']">Learn More</a>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Sell Property</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/home-page/to-buy.jpg" alt="Sell Property">
+          <mat-card-content>
+            <p>Advertise your property for sale.</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-button [routerLink]="['/sell']">Learn More</a>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
 </body>
