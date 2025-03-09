@@ -4,8 +4,29 @@
       <img src="assets/img/logo.png" alt="Home Icon" class="home-icon">
     </button>
     <span class="spacer"></span>
-    <button mat-flat-button [routerLink]="['/buy']">Buy</button>
-    <button mat-flat-button [routerLink]="['/rent']">Rent</button>
-    <button mat-flat-button [routerLink]="['/sell']">Sell</button>
+    <button mat-flat-button [matMenuTriggerFor]="buyMenu">Buy</button>
+    <button mat-flat-button [matMenuTriggerFor]="rentMenu">Rent</button>
+    <button mat-flat-button [matMenuTriggerFor]="sellMenu">Sell</button>
+
+    <!-- Buy Dropdown Menu -->
+    <mat-menu #buyMenu="matMenu">
+      <button mat-menu-item>All Properties for Sale</button>
+      <button mat-menu-item>Houses</button>
+      <button mat-menu-item>Apartments</button>
+    </mat-menu>
+
+    <!-- Rent Dropdown Menu -->
+    <mat-menu #rentMenu="matMenu">
+      <button mat-menu-item>All Properties to Rent</button>
+      <button mat-menu-item>Houses</button>
+      <button mat-menu-item>Apartments</button>
+    </mat-menu>
+
+    <!-- Sell Dropdown Menu -->
+    <mat-menu #sellMenu="matMenu">
+      <button mat-menu-item>Sell With an Agent</button>
+      <button mat-menu-item>Sell Privately</button>
+      <button mat-menu-item>Auction</button>
+    </mat-menu>
   </mat-toolbar>
 </header>

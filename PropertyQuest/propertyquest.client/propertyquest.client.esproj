@@ -7,4 +7,8 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\propertyquest.client\browser\</BuildOutputFolder>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="src\app\buy\**" />
+    <TypeScriptConfiguration Remove="src\app\buy\**" />
+  </ItemGroup>
 </Project>

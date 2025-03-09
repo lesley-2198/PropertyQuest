@@ -1,17 +1,19 @@
-<div class="container">
-  <img src="assets/img/landing-image.png" class="landing-image" alt="Landing Image">
-  <div class="text-overlay">
-    <h1>Welcome to Property Quest</h1>
-    <p>Your Dream Home Awaits</p>
-    <div class="search-bar">
-      <mat-form-field>
-        <mat-label>City</mat-label>
-        <input matInput placeholder="Enter city" [(ngModel)]="city">
-      </mat-form-field>
-      <div class="button-group">
-        <button mat-raised-button color="primary" (click)="search('rent')">Rent</button>
-        <button mat-raised-button color="accent" (click)="search('buy')">Buy</button>
+<body>
+  <div class="container">
+    <img src="assets/img/landing-image.png" class="landing-image" alt="Landing Image">
+    <div class="text-overlay">
+      <h1>Welcome to Property Quest</h1>
+      <p>Your Dream Home Awaits</p>
+      <div class="search-bar">
+        <mat-form-field>
+          <mat-label>City</mat-label>
+          <input matInput placeholder="Enter city" [(ngModel)]="city">
+        </mat-form-field>
+        <div class="button-group">
+          <button mat-raised-button color="primary" (click)="search('rent')">Rent</button>
+          <button mat-raised-button color="accent" (click)="search('buy')">Buy</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</body>

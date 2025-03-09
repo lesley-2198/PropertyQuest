@@ -7,9 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { BuyComponent } from './buy/buy.component';
-import { RentComponent } from './rent/rent.component';
-import { SellComponent } from './sell/sell.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -17,14 +14,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    BuyComponent,
-    RentComponent,
-    SellComponent,
     NavMenuComponent
   ],
   imports: [
@@ -37,7 +32,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatIconModule,
     MatToolbarModule,
     MatInputModule, // For the input field
-    MatFormFieldModule // For the form field
+    MatFormFieldModule, // For the form field
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
