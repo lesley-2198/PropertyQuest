@@ -18,14 +18,20 @@
 
 @media (max-width: 768px) {
   .container {
-    height: auto;
+    height: auto; /* Allows the container height to adjust based on content */
   }
 
   .landing-image {
     width: 100%;
     max-height: none; /* Allows the image to scale naturally on smaller screens */
   }
+
+  .text-overlay {
+    font-size: 1rem; /* Adjust font size for mobile devices */
+    max-width: 250px; /* Adjust maximum width for mobile devices */
+  }
 }
+
 
 .overlay {
   position: absolute;
@@ -47,6 +53,13 @@
   text-align: right; /* Right align the text */
   padding: 20px;
   max-width: 450px; /* Set a maximum width for the text box */
+}
+
+@media (max-width: 1024px) {
+  .text-overlay {
+    font-size: 1.2rem; /* Adjust font size for tablets */
+    max-width: 300px; /* Adjust maximum width for tablets */
+  }
 }
 
 .text-overlay h1 {
