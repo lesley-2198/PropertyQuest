@@ -18,13 +18,12 @@
   font-size: 30px;
   font-weight: 700;
   height: 65px;
-  display: flex;
   display: flex; // Ensures that child elements are aligned horizontally
   align-items: center; // Aligns child elements vertically in the center
 }
 
 .home p {
-    margin: 0;
+  margin: 0;
   display: inline;
   color: rgb(0,21,36);
   font-size: 25px;
@@ -40,3 +39,10 @@
 .spacer {
   flex: 1 1 auto; // Takes up remaining space to push other buttons to the right
 }
+
+/*header {
+  padding-bottom: 0px;
+  top: 0;
+  width: 100%;
+  margin: 0;
+}*/

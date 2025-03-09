@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  city: string = '';
 
+  search(type: string) {
+    console.log(`Searching for ${type} in ${this.city}`);
+    // Implement your search logic here
+  }
 }
