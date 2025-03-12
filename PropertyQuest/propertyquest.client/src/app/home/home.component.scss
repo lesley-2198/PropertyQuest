@@ -8,61 +8,61 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 1800px;
-  height: auto; /* Adjust based on your design needs */
+  height: auto;
 }
 
 .landing-image {
   border-radius: 24px;
-  width: 100%; /* Ensures the image covers the entire container width */
+  width: 100%;
   max-width: 1400px;
-  max-height: 500px;
-  object-fit: cover; /* Ensures the image scales without losing its aspect ratio */
-  object-position: center; /* Centers the image within the container */
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 768px) {
   .container {
-    height: auto; /* Allows the container height to adjust based on content */
+    height: auto;
   }
 
   .landing-image {
     width: 100%;
-    max-height: none; /* Allows the image to scale naturally on smaller screens */
+    max-height: none;
   }
 
   .text-overlay {
-    font-size: 1rem; /* Adjust font size for mobile devices */
-    max-width: 250px; /* Adjust maximum width for mobile devices */
+    font-size: 1rem;
+    max-width: 250px; 
   }
 }
 
 @media (max-width: 1024px) {
   .text-overlay {
-    font-size: 1.2rem; /* Adjust font size for tablets */
-    max-width: 300px; /* Adjust maximum width for tablets */
+    font-size: 1.2rem;
+    max-width: 300px;
   }
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1400px;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Adjusted opacity to 30% */
-  border-radius: 24px; /* Match the image border radius */
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 24px;
 }
 
 .text-overlay {
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute; /* Position the text overlay on top of the image */
-  top: 50%; /* Center the text vertically */
-  right: 150px; /* Position the text to the right */
-  transform: translateY(-50%); /* Adjust the centering */
-  color: white; /* Text color */
-  text-align: right; /* Right align the text */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white; 
+  text-align: right;
   padding: 20px;
-  max-width: 450px; /* Set a maximum width for the text box */
+  max-width: 450px;
 }
 
 .text-overlay h1 {
@@ -78,12 +78,12 @@ body {
 .search-bar {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Add some space between the search bar and buttons */
+  gap: 10px;
 }
 
 .button-group {
   display: flex;
-  gap: 10px; /* Add some space between the buttons */
+  gap: 10px;
 }
 
 .button-group button {
@@ -101,25 +101,38 @@ body {
 }
 
 .card-container {
-  padding: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Centers the cards */
+  gap: 30px; /* Increases spacing between cards */
+  padding: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
 }
 
 mat-card {
-  max-width: 300px;
-  margin: 20px;
+  max-width: 400px; /* Increased card size */
+  min-width: 350px; /* Prevents cards from being too small */
+  flex: 1; /* Ensures equal width distribution */
+  margin: 15px;
+  padding: 20px;
+}
+
+mat-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
 }
 
 mat-card-title {
-  font-size: 24px;
+  font-size: 28px; /* Increased title size */
   font-weight: bold;
+  color: rgb(0,21,36);
+  margin-bottom: 5px;
 }
 
 mat-card-content p {
-  font-size: 16px;
+  font-size: 18px; /* Slightly larger content text */
 }
 
 mat-card-actions a {
-  color: rgb(0, 21, 36);
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0,21,36);
 }

@@ -2,6 +2,8 @@
   <div class="container">
     <img src="assets/img/home-page/landing-image.png" class="landing-image" alt="Landing Image">
 
+    <div class="overlay"></div>
+
     <div class="text-overlay">
       <h1>Welcome to Property Quest</h1>
       <p>Your Dream Home Awaits</p>
@@ -21,52 +23,63 @@
   </div>
 
   <div class="card-container">
-    <mat-grid-list cols="3" rowHeight="1:1">
-      <mat-grid-tile>
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>Buy Property</mat-card-title>
-          </mat-card-header>
-          <img mat-card-image src="assets/img/home-page/for-sale.jpg" alt="Buy Property">
-          <mat-card-content>
-            <p>Find the best properties to buy.</p>
-          </mat-card-content>
-          <mat-card-actions>
-            <a mat-button [routerLink]="['/buy']">Learn More</a>
-          </mat-card-actions>
-        </mat-card>
-      </mat-grid-tile>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Buy Property</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/home-page/for-sale.jpg" alt="Buy Property">
+      <mat-card-content>
+        <p>Find the best properties to buy.</p>
+        <p>Explore a wide range of properties with detailed descriptions, high-quality images, and virtual tours to help you make the right decision.</p>
+        <ul>
+          <li>Extensive property listings</li>
+          <li>Competitive prices</li>
+          <li>Expert advice</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button [routerLink]="['/buy']">Search Properties</a>
+      </mat-card-actions>
+    </mat-card>
 
-      <mat-grid-tile>
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>Rent Property</mat-card-title>
-          </mat-card-header>
-          <img mat-card-image src="assets/img/home-page/to-rent.jpg" alt="Rent Property">
-          <mat-card-content>
-            <p>Discover rental properties.</p>
-          </mat-card-content>
-          <mat-card-actions>
-            <a mat-button [routerLink]="['/rent']">Learn More</a>
-          </mat-card-actions>
-        </mat-card>
-      </mat-grid-tile>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Rent Property</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/home-page/to-rent.jpg" alt="Rent Property">
+      <mat-card-content>
+        <p>Discover rental properties.</p>
+        <p>From apartments to houses, find the perfect rental property that fits your lifestyle and budget. Browse through our diverse listings to find your next home.</p>
+        <ul>
+          <li>Flexible lease terms</li>
+          <li>Pet-friendly options</li>
+          <li>Prime locations</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button [routerLink]="['/rent']">Search Properties</a>
+      </mat-card-actions>
+    </mat-card>
 
-      <mat-grid-tile>
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>Sell Property</mat-card-title>
-          </mat-card-header>
-          <img mat-card-image src="assets/img/home-page/to-buy.jpg" alt="Sell Property">
-          <mat-card-content>
-            <p>Advertise your property for sale.</p>
-          </mat-card-content>
-          <mat-card-actions>
-            <a mat-button [routerLink]="['/sell']">Learn More</a>
-          </mat-card-actions>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Sell Property</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/home-page/to-buy.jpg" alt="Sell Property">
+      <mat-card-content>
+        <p>Advertise your property for sale.</p>
+        <p>Reach a large audience of potential buyers by listing your property with us. Benefit from our marketing tools and expertise to sell your property quickly and at the best price.</p>
+        <ul>
+          <li>Comprehensive marketing</li>
+          <li>Professional photography</li>
+          <li>Targeted advertising</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button [routerLink]="['/sell']">Learn More</a>
+      </mat-card-actions>
+    </mat-card>
   </div>
+
 
 </body>
