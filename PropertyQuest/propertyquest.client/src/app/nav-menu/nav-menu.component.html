@@ -3,10 +3,27 @@
     <button mat-flat-button class="home" [routerLink]="['/']">
       <img src="assets/img/nav-menu/logo.png" alt="Home Icon" class="home-icon">
     </button>
+
     <span class="spacer"></span>
-    <button mat-flat-button [matMenuTriggerFor]="buyMenu">Buy</button>
-    <button mat-flat-button [matMenuTriggerFor]="rentMenu">Rent</button>
-    <button mat-flat-button [matMenuTriggerFor]="sellMenu">Sell</button>
+
+    <!-- Show buttons for large screens -->
+    <div class="desktop-menu" *ngIf="!isSmallScreen">
+      <button mat-flat-button [matMenuTriggerFor]="buyMenu">Buy</button>
+      <button mat-flat-button [matMenuTriggerFor]="rentMenu">Rent</button>
+      <button mat-flat-button [matMenuTriggerFor]="sellMenu">Sell</button>
+    </div>
+
+    <!-- Show single menu button for small screens -->
+    <button mat-icon-button class="mobile-menu" [matMenuTriggerFor]="mainMenu" *ngIf="isSmallScreen">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <!-- Dropdown menu for small screens -->
+    <mat-menu #mainMenu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="buyMenu">Buy</button>
+      <button mat-menu-item [matMenuTriggerFor]="rentMenu">Rent</button>
+      <button mat-menu-item [matMenuTriggerFor]="sellMenu">Sell</button>
+    </mat-menu>
 
     <!-- Buy Dropdown Menu -->
     <mat-menu #buyMenu="matMenu">
