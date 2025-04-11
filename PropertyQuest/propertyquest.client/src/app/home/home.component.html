@@ -22,64 +22,30 @@
     </div>
   </div>
 
+  <div class="logo-slider">
+    <ngx-slick-carousel class="carousel" [config]="sliderConfig">
+      <div ngxSlickItem *ngFor="let agency of agencies" class="slide">
+        <img [src]="agency.logo" alt="{{ agency.name }}" class="logo">
+      </div>
+    </ngx-slick-carousel>
+  </div>
+
   <div class="card-container">
-    <mat-card>
+    <mat-card *ngFor="let action of propertyActions">
       <mat-card-header>
-        <mat-card-title>Buy Property</mat-card-title>
+        <mat-card-title>{{ action.title }}</mat-card-title>
       </mat-card-header>
-      <img mat-card-image src="assets/img/home-page/for-sale.jpg" alt="Buy Property">
+      <img mat-card-image [src]="action.image" [alt]="action.title">
       <mat-card-content>
-        <p>Find the best properties to buy.</p>
-        <p>Explore a variety of properties available for purchase. Find detailed descriptions and high-quality images to help you choose the perfect home.</p>
+        <p>{{ action.description }}</p>
+        <p>{{ action.details }}</p>
         <ul>
-          <li>Extensive property listings</li>
-          <li>Competitive prices</li>
-          <li>Expert advice</li>
+          <li *ngFor="let feature of action.features">{{ feature }}</li>
         </ul>
       </mat-card-content>
       <mat-card-actions>
-        <a mat-button [routerLink]="['/buy']">Search Properties</a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Rent Property</mat-card-title>
-      </mat-card-header>
-      <img mat-card-image src="assets/img/home-page/to-rent.jpg" alt="Rent Property">
-      <mat-card-content>
-        <p>Discover rental properties.</p>
-        <p>Discover a wide range of rental properties that suit your lifestyle and budget. Browse through detailed descriptions and photos.</p>
-        <ul>
-          <li>Flexible lease terms</li>
-          <li>Pet-friendly options</li>
-          <li>Prime locations</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-button [routerLink]="['/rent']">Search Properties</a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Sell Property</mat-card-title>
-      </mat-card-header>
-      <img mat-card-image src="assets/img/home-page/to-buy.jpg" alt="Sell Property">
-      <mat-card-content>
-        <p>Advertise your property for sale.</p>
-      <p>Advertise your property for sale and reach potential buyers. Utilize our marketing tools and expertise to sell quickly and at a good price.</p>
-        <ul>
-          <li>Comprehensive marketing</li>
-          <li>Professional photography</li>
-          <li>Targeted advertising</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-button [routerLink]="['/sell']">Learn More</a>
+        <a mat-button [routerLink]="[action.route]">{{ action.buttonLabel }}</a>
       </mat-card-actions>
     </mat-card>
   </div>
-
-
 </body>

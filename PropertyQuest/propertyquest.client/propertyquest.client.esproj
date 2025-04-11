@@ -11,4 +11,8 @@
     <None Remove="src\app\buy\**" />
     <TypeScriptConfiguration Remove="src\app\buy\**" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\NewFolder1\" />
+    <Folder Include="src\NewFolder\" />
+  </ItemGroup>
 </Project>

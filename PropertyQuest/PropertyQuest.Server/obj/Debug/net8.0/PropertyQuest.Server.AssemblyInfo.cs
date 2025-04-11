@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PropertyQuest.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+669efd469b314b088057332b53c1257cc56ae63a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5b494deeea8eb134ce01d00af4255e7cc8d5a92")]
 [assembly: System.Reflection.AssemblyProductAttribute("PropertyQuest.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PropertyQuest.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

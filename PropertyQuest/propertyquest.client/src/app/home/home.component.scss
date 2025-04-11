@@ -1,3 +1,5 @@
+$primary-color: rgb (0,21,36);
+
 body {
     max-width: 1800px;
 }
@@ -87,8 +89,27 @@ body {
 }
 
 .button-group button {
-  background-color: rgb(0,21,36);
+  background-color: $primary-color;
 }
+
+.logo-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide {
+  display: inline-block; /* Ensures horizontal layout */
+  margin: 0 10px; /* Spacing between logos */
+}
+
+.logo {
+  max-width: 100px; /* Adjust to desired size */
+  max-height: 100px;
+}
+
 
 .card-container {
   display: flex;
@@ -113,7 +134,7 @@ mat-card:hover {
 mat-card-title {
   font-size: clamp(20px, 2vw, 28px); /* Increased title size */
   font-weight: bold;
-  color: rgb(0,21,36);
+  color: $primary-color;
   margin-bottom: 5px;
 }
 
