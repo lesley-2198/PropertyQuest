@@ -1,4 +1,6 @@
 $primary-color: rgb (0,21,36);
+$scroll-speed: 30s;
+$logo-grayscale: 100%;
 
 body {
     max-width: 1800px;
@@ -92,22 +94,64 @@ body {
   background-color: $primary-color;
 }
 
-.logo-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.logo-slider-wrapper {
+  margin-top: 35px;
+  text-align: center;
+
+  .carousel-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: $primary-color;
+  }
+}
+
+.logo-slider.custom-scroll {
   overflow: hidden;
   width: 100%;
+  padding: 20px 0;
+  border-radius: 8px;
+
+  .logo-track {
+    display: flex;
+    width: calc(200%);
+    animation: scroll-logos $scroll-speed linear infinite;
+  }
+
+  .logo-item {
+    flex: 0 0 auto;
+    width: 150px; // Increased size
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    a {
+      display: inline-block;
+    }
+
+    img {
+      max-width: 120px;
+      max-height: 100px;
+      object-fit: contain;
+      filter: grayscale($logo-grayscale);
+      transition: filter 0.3s ease-in-out;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
 }
 
-.slide {
-  display: inline-block; /* Ensures horizontal layout */
-  margin: 0 10px; /* Spacing between logos */
-}
+@keyframes scroll-logos {
+  from {
+    transform: translateX(0);
+  }
 
-.logo {
-  max-width: 100px; /* Adjust to desired size */
-  max-height: 100px;
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 
@@ -151,5 +195,5 @@ mat-card li {
 mat-card-actions a {
   font-size: clamp(15px, 1.5vw, 16px);
   font-weight: bold;
-  color: rgb(0,21,36);
+  color: $primary-color;
 }

@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 import { MaterialModule } from './material.module';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
  
 
 
@@ -25,7 +24,6 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SlickCarouselModule
 
   ],
   providers: [],

@@ -22,13 +22,26 @@
     </div>
   </div>
 
-  <div class="logo-slider">
-    <ngx-slick-carousel class="carousel" [config]="sliderConfig">
-      <div ngxSlickItem *ngFor="let agency of agencies" class="slide">
-        <img [src]="agency.logo" alt="{{ agency.name }}" class="logo">
+  <div class="logo-slider-wrapper">
+    <h2 class="carousel-heading">Trusted Real Estate Agencies</h2>
+
+    <div class="logo-slider custom-scroll">
+      <div class="logo-track">
+        <div class="logo-item" *ngFor="let agency of agencies">
+          <a [href]="agency.url" target="_blank" rel="noopener noreferrer">
+            <img [src]="agency.logo" [alt]="agency.name" />
+          </a>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="logo-item" *ngFor="let agency of agencies">
+          <a [href]="agency.url" target="_blank" rel="noopener noreferrer">
+            <img [src]="agency.logo" [alt]="agency.name" />
+          </a>
+        </div>
       </div>
-    </ngx-slick-carousel>
+    </div>
   </div>
+
 
   <div class="card-container">
     <mat-card *ngFor="let action of propertyActions">

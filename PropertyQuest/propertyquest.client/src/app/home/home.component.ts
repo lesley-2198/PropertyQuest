@@ -10,10 +10,10 @@ interface PropertyAction {
   buttonLabel: string;
 }
 
-
 interface Agency {
   logo: string;
   name: string;
+  url: string;
 }
 
 @Component({
@@ -52,29 +52,17 @@ export class HomeComponent {
     }
   ];
 
-
-
   agencies: Agency[] = [
-    { logo: 'assets/img/agencies/harcourts.png', name: 'Harcourts Beachfront' },
-    { logo: 'assets/img/agencies/ipc.png', name: 'IPC Properties' },
-    { logo: 'assets/img/agencies/home-and-equity.png', name: 'Home & Equity' },
-    { logo: 'assets/img/agencies/chas-everitt.png', name: 'Chas Everitt' },
-    { logo: 'assets/img/agencies/just-property.png', name: 'Just Property' },
-    { logo: 'assets/img/agencies/keller-williams.png', name: 'Keller Williams' },
-    { logo: 'assets/img/agencies/pam-golding.png', name: 'Pam Golding' },
-    { logo: 'assets/img/agencies/tyson-properties.png', name: 'Tyson Properties' },
-    { logo: 'assets/img/agencies/remax.png', name: 'RE/MAX' },
+    { logo: 'assets/img/agencies/harcourts.png', name: 'Harcourts Beachfront', url: 'https://www.harcourts.co.za/' },
+    { logo: 'assets/img/agencies/ipc.png', name: 'IPC Properties', url: 'https://www.ipcproperties.co.za/' },
+    { logo: 'assets/img/agencies/home-and-equity.png', name: 'Home & Equity', url: 'https://www.homeandequity.co.za/' },
+    { logo: 'assets/img/agencies/chas-everitt.png', name: 'Chas Everitt', url: 'https://www.chaseveritt.co.za/' },
+    { logo: 'assets/img/agencies/just-property.png', name: 'Just Property', url: 'https://www.just.property/' },
+    { logo: 'assets/img/agencies/keller-williams.png', name: 'Keller Williams', url: 'https://www.kwsa.co.za/' },
+    { logo: 'assets/img/agencies/pam-golding.png', name: 'Pam Golding', url: 'https://www.pamgolding.co.za/' },
+    { logo: 'assets/img/agencies/tyson-properties.png', name: 'Tyson Properties', url: 'https://www.tysonprop.co.za/' },
+    { logo: 'assets/img/agencies/remax.png', name: 'RE/MAX', url: 'https://www.remax.co.za/' }
   ];
-
-
-  sliderConfig = {
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false
-  };
 
 
   city: string = '';
