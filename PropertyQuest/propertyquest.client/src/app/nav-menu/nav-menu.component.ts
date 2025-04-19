@@ -11,6 +11,7 @@ export class NavMenuComponent implements OnInit {
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 
+
   ngOnInit(): void {
     this.breakpointObserver.observe('(max-width: 768px)').subscribe(result => {
       this.isSmallScreen = result.matches;

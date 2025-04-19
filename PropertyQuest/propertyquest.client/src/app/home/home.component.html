@@ -3,23 +3,22 @@
     <img src="assets/img/home-page/landing-image.png" class="landing-image" alt="Landing Image">
 
     <div class="overlay"></div>
+      <div class="text-overlay">
+        <h1>Welcome to Property Quest</h1>
+        <p>Your Dream Home Awaits</p>
 
-    <div class="text-overlay">
-      <h1>Welcome to Property Quest</h1>
-      <p>Your Dream Home Awaits</p>
+        <div class="search-bar">
+          <mat-form-field>
+            <mat-label>City</mat-label>
+            <input matInput placeholder="Enter city" [(ngModel)]="city">
+          </mat-form-field>
 
-      <div class="search-bar">
-        <mat-form-field>
-          <mat-label>City</mat-label>
-          <input matInput placeholder="Enter city" [(ngModel)]="city">
-        </mat-form-field>
-
-        <div class="button-group">
-          <button mat-raised-button color="primary" (click)="search('rent')">Rent</button>
-          <button mat-raised-button color="accent" (click)="search('buy')">Buy</button>
+          <div class="button-group">
+            <button mat-raised-button color="primary" (click)="search('rent')">Rent</button>
+            <button mat-raised-button color="accent" (click)="search('buy')">Buy</button>
+          </div>
         </div>
       </div>
-    </div>
   </div>
 
   <div class="logo-slider-wrapper">
@@ -28,13 +27,13 @@
     <div class="logo-slider custom-scroll">
       <div class="logo-track">
         <div class="logo-item" *ngFor="let agency of agencies">
-          <a [href]="agency.url" target="_blank" rel="noopener noreferrer">
+          <a [href]="agency.url" >
             <img [src]="agency.logo" [alt]="agency.name" />
           </a>
         </div>
         <!-- Duplicate for seamless loop -->
         <div class="logo-item" *ngFor="let agency of agencies">
-          <a [href]="agency.url" target="_blank" rel="noopener noreferrer">
+          <a [href]="agency.url">
             <img [src]="agency.logo" [alt]="agency.name" />
           </a>
         </div>
@@ -60,5 +59,19 @@
         <a mat-button [routerLink]="[action.route]">{{ action.buttonLabel }}</a>
       </mat-card-actions>
     </mat-card>
+  </div>
+
+  <div class="developments-container">
+    <img src="assets/img/home-page/developments-img.png" class="developments-image" alt="Developments Image">
+
+    <div class="dev-overlay">
+      <div class="dev-text-overlay">
+        <h1>Developments</h1>
+        <p>
+          Exciting new suburban developments across Johannesburg, Cape Town, and Durban offer modern homes, secure communities, and prime investment opportunities. Whether you're buying, renting, or investing, these areas promise growth, convenience, and value. Find your perfect home today!
+        </p>
+      </div>
+      <button mat-raised-button color="primary" (click)="search('rent')" class="explore-dev">Explore Developments</button>
+    </div>
   </div>
 </body>

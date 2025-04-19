@@ -17,33 +17,34 @@
     <button mat-icon-button class="mobile-menu" [matMenuTriggerFor]="mainMenu" *ngIf="isSmallScreen">
       <mat-icon>menu</mat-icon>
     </button>
-
-    <!-- Dropdown menu for small screens -->
-    <mat-menu #mainMenu="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="buyMenu">Buy</button>
-      <button mat-menu-item [matMenuTriggerFor]="rentMenu">Rent</button>
-      <button mat-menu-item [matMenuTriggerFor]="sellMenu">Sell</button>
-    </mat-menu>
-
-    <!-- Buy Dropdown Menu -->
-    <mat-menu #buyMenu="matMenu">
-      <button mat-menu-item>All Properties for Sale</button>
-      <button mat-menu-item>Houses</button>
-      <button mat-menu-item>Apartments</button>
-    </mat-menu>
-
-    <!-- Rent Dropdown Menu -->
-    <mat-menu #rentMenu="matMenu">
-      <button mat-menu-item>All Properties to Rent</button>
-      <button mat-menu-item>Houses</button>
-      <button mat-menu-item>Apartments</button>
-    </mat-menu>
-
-    <!-- Sell Dropdown Menu -->
-    <mat-menu #sellMenu="matMenu">
-      <button mat-menu-item>Sell With an Agent</button>
-      <button mat-menu-item>Sell Privately</button>
-      <button mat-menu-item>Auction</button>
-    </mat-menu>
   </mat-toolbar>
+
+  <!-- Dropdown menu for small screens -->
+  <mat-menu #mainMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="buyMenu">Buy</button>
+    <button mat-menu-item [matMenuTriggerFor]="rentMenu">Rent</button>
+    <button mat-menu-item [matMenuTriggerFor]="sellMenu">Sell</button>
+  </mat-menu>
+
+  <!-- Buy Dropdown Menu -->
+  <mat-menu #buyMenu="matMenu">
+    <button mat-menu-item>All Properties for Sale</button>
+    <button mat-menu-item>Houses</button>
+    <button mat-menu-item>Apartments</button>
+  </mat-menu>
+
+  <!-- Rent Dropdown Menu -->
+  <mat-menu #rentMenu="matMenu">
+    <button mat-menu-item>All Properties to Rent</button>
+    <button mat-menu-item>Houses</button>
+    <button mat-menu-item>Apartments</button>
+  </mat-menu>
+
+  <!-- Sell Dropdown Menu -->
+  <mat-menu #sellMenu="matMenu">
+    <button mat-menu-item>Sell With an Agent</button>
+    <button mat-menu-item>Sell Privately</button>
+    <button mat-menu-item>Auction</button>
+  </mat-menu>
+
 </header>

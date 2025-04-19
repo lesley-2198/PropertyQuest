@@ -1,9 +1,10 @@
-$primary-color: rgb (0,21,36);
+$primary-color: rgb(0,21,36);
 $scroll-speed: 30s;
 $logo-grayscale: 100%;
 
 body {
     max-width: 1800px;
+    position:center
 }
 
 .container {
@@ -35,8 +36,12 @@ body {
   }
 
   .text-overlay {
-    font-size: 1rem;
+    margin-top: 20px;
     max-width: 250px; 
+  }
+
+  .button-group {
+      display: none;
   }
 }
 
@@ -154,7 +159,6 @@ body {
   }
 }
 
-
 .card-container {
   display: flex;
   justify-content: center; /* Centers the cards */
@@ -196,4 +200,53 @@ mat-card-actions a {
   font-size: clamp(15px, 1.5vw, 16px);
   font-weight: bold;
   color: $primary-color;
+}
+
+
+.developments-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 24px;
+  overflow: hidden; /* Ensures rounded corners are consistent */
+}
+
+.developments-image {
+  width: 50%; /* Image takes up half the container */
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dev-overlay {
+  position: relative; /* Adjusted for layout */
+  width: 50%; /* The other half for the overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Aligns content to the bottom */
+  background-color: rgba(0, 0, 0, 0.4); /* Overlay effect */
+  color: white;
+  padding: 20px;
+}
+
+.dev-text-overlay {
+  margin-bottom: 20px; /* Adds spacing above button */
+}
+
+.dev-text-overlay h1 {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.dev-text-overlay p {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.explore-dev {
+  align-self: flex-end; /* Button aligns to the bottom-right */
+  margin-top: 10px;
 }

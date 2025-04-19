@@ -67,8 +67,13 @@ export class HomeComponent {
 
   city: string = '';
 
-  search(type: string) {
-    console.log(`Searching for ${type} in ${this.city}`);
-    // Implement your search logic here
+  search(type: 'rent' | 'buy'): void;
+  search(city: string): void;
+  search(param: string): void {
+    if (param === 'rent' || param === 'buy') {
+      console.log(`Searching to ${param} in ${this.city}`);
+    } else {
+      console.log(`Searching in ${param}`);
+    }
   }
 }
