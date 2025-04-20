@@ -1,0 +1,79 @@
+$primary-background: rgb(221, 161, 94);
+$primary-color: rgb(0,21,36 );
+
+.footer {
+  font-size: 14px;
+  display: flex;
+  width: 100%;
+  background-color: $primary-background;
+  color: $primary-color;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+}
+
+.home {
+  display: flex;
+  background-color: transparent !important;
+  margin-right: auto;
+  height: 65px;
+  width: 65px;
+  align-items: center;
+}
+
+.home-icon {
+  width: 65px;
+  height: 65px;
+  padding: 5px
+}
+
+.sections {
+  display: flex;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column; /* Ensures vertical alignment */
+  }
+
+  .sections h3 {
+    font-weight: 700;
+    font-size: 15px;
+    text-align: left
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  ul, ol {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+ul {
+  list-style: none;
+  padding-left: 0; /* Removes default padding */
+  margin: 0;
+  text-align: left;
+}
+
+  .footer a {
+    color: $primary-color;
+    text-decoration: none;
+    margin: 0 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }

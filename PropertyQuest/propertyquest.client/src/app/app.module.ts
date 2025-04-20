@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 import { MaterialModule } from './material.module';
+import { FooterComponent } from './footer/footer.component';
  
 
 
@@ -17,6 +18,7 @@ import { MaterialModule } from './material.module';
     AppComponent,
     HomeComponent,
     NavMenuComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
