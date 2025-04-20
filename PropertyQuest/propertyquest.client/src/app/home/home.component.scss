@@ -1,10 +1,10 @@
-$primary-color: rgb(0,21,36);
+$primary-color: rgb(0, 21, 36);
 $scroll-speed: 30s;
 $logo-grayscale: 100%;
 
 body {
-    max-width: 1800px;
-    position:center
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .container {
@@ -23,33 +23,6 @@ body {
   max-height: 450px;
   object-fit: cover;
   object-position: center;
-}
-
-@media (max-width: 768px) {
-  .container {
-    height: auto;
-  }
-
-  .landing-image {
-    width: 100%;
-    max-height: none;
-  }
-
-  .text-overlay {
-    margin-top: 20px;
-    max-width: 250px; 
-  }
-
-  .button-group {
-      display: none;
-  }
-}
-
-@media (max-width: 1024px) {
-  .text-overlay {
-    font-size: 1.2rem;
-    max-width: 300px;
-  }
 }
 
 .overlay {
@@ -72,16 +45,16 @@ body {
   text-align: right;
   padding: 20px;
   max-width: 450px;
-}
 
-.text-overlay h1 {
+  h1 {
     font-weight: 700;
     font-size: 35px;
-}
+  }
 
-.text-overlay p {
+  p {
     font-weight: 500;
     font-size: 25px;
+  }
 }
 
 .search-bar {
@@ -93,10 +66,10 @@ body {
 .button-group {
   display: flex;
   gap: 10px;
-}
 
-.button-group button {
-  background-color: $primary-color;
+  button {
+    background-color: $primary-color;
+  }
 }
 
 .logo-slider-wrapper {
@@ -125,7 +98,7 @@ body {
 
   .logo-item {
     flex: 0 0 auto;
-    width: 150px; // Increased size
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,92 +134,139 @@ body {
 
 .card-container {
   display: flex;
-  justify-content: center; /* Centers the cards */
-  gap: 30px; /* Increases spacing between cards */
+  justify-content: center;
+  gap: 30px;
   padding: 20px;
-  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  flex-wrap: wrap;
+  padding-bottom: 50px;
 }
 
 mat-card {
-  max-width: 400px; /* Increased card size */
-  min-width: 300px; /* Prevents cards from being too small */
-  flex: 1; /* Ensures equal width distribution */
+  max-width: 400px;
+  min-width: 300px;
+  flex: 1;
   margin: 15px;
   padding: 20px;
-}
 
-mat-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
-}
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
 
-mat-card-title {
-  font-size: clamp(20px, 2vw, 28px); /* Increased title size */
-  font-weight: bold;
-  color: $primary-color;
-  margin-bottom: 5px;
-}
+  mat-card-title {
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 5px;
+  }
 
-mat-card-content p {
-  font-size: clamp(15px, 1.8vw, 18px); /* Slightly larger content text */
-  font-weight: 500;
-}
+  mat-card-content p {
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 500;
+  }
 
-mat-card li {
-  font-weight: 500;
-  font-size: 15px;
-}
+  mat-card li {
+    font-weight: 500;
+    font-size: 15px;
+  }
 
-mat-card-actions a {
-  font-size: clamp(15px, 1.5vw, 16px);
-  font-weight: bold;
-  color: $primary-color;
+  mat-card-actions a {
+    font-size: clamp(15px, 1.5vw, 16px);
+    font-weight: bold;
+    color: $primary-color;
+  }
 }
-
 
 .developments-container {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   height: auto;
   border-radius: 24px;
-  overflow: hidden; /* Ensures rounded corners are consistent */
+  overflow: hidden;
+  margin: 0 auto;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .developments-image {
-  width: 50%; /* Image takes up half the container */
+  width: 50%;
   height: auto;
   object-fit: cover;
   object-position: center;
 }
 
 .dev-overlay {
-  position: relative; /* Adjusted for layout */
-  width: 50%; /* The other half for the overlay */
+  position: relative;
+  width: 50%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Aligns content to the bottom */
-  background-color: rgba(0, 0, 0, 0.4); /* Overlay effect */
+  justify-content: flex-end;
+  background-color: rgba(221, 161, 94, 0.5);
   color: white;
   padding: 20px;
 }
 
 .dev-text-overlay {
-  margin-bottom: 20px; /* Adds spacing above button */
-}
+  margin-bottom: 20px;
+  color: $primary-color;
+  line-height: 1.2;
 
-.dev-text-overlay h1 {
-  font-weight: 700;
-  font-size: 35px;
-}
+  h1 {
+    font-weight: 700;
+    font-size: 35px;
+  }
 
-.dev-text-overlay p {
-  font-weight: 500;
-  font-size: 25px;
+  p {
+    font-weight: 500;
+    font-size: 25px;
+  }
 }
 
 .explore-dev {
-  align-self: flex-end; /* Button aligns to the bottom-right */
+  align-self: flex-end;
   margin-top: 10px;
+  background-color: $primary-color;
+}
+
+/* Consolidated Media Queries */
+@media (max-width: 1024px) {
+  .text-overlay {
+    font-size: 1.2rem;
+    width: 95%;
+    padding: 10px;
+  }
+
+  .developments-image {
+    display: none;
+  }
+
+  .dev-overlay {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .developments-container {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .developments-image {
+    display: none;
+  }
+
+  .dev-text-overlay {
+    line-height: 1.2;
+    margin-top: 20px;
+    width: 100%;
+  }
 }
