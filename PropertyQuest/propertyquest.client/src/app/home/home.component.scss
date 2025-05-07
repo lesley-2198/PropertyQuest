@@ -5,6 +5,7 @@ $logo-grayscale: 100%;
 body {
   max-width: 1800px;
   margin: 0 auto;
+  padding-bottom: 20px
 }
 
 .container {
@@ -233,7 +234,7 @@ mat-card {
   background-color: $primary-color;
 }
 
-/* Consolidated Media Queries */
+
 @media (max-width: 1024px) {
   .text-overlay {
     font-size: 1.2rem;

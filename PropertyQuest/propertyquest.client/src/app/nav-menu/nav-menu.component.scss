@@ -11,7 +11,6 @@
   color: rgb(0,21,36);
 }
 
-/* Hide desktop menu on small screens */
 .desktop-menu {
   display: flex;
 }
@@ -20,7 +19,6 @@
   display: none;
 }
 
-/* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
   .desktop-menu {
     display: none;
@@ -45,15 +43,15 @@
 }
 
 .spacer {
-  flex: 1 1 auto; // Takes up remaining space to push other buttons to the right
-}
+  flex: 1 1 auto;
 
-.mat-menu-content {
-  background-color: rgb(221,161,94);
-  color: rgb(0,21,36);
-}
+  .mat-menu-content {
+    background-color: rgb(221,161,94);
+    color: rgb(0,21,36);
+  }
 
-.mat-menu-item {
-  font-size: 15px;
-  font-weight: 500;
+  .mat-menu-item {
+    font-size: 15px;
+    font-weight: 500;
+  }
 }

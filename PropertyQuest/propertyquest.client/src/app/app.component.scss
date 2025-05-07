@@ -1,3 +1,17 @@
 .container {
   padding: 10px;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+router-outlet, .content {
+  flex: 1;
+}
