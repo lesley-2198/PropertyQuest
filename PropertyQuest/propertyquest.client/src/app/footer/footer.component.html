@@ -1,11 +1,24 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-content">
-      <!-- Logo stays at the top left -->
-      <div class="footer-logo">
-        <button mat-flat-button class="home" [routerLink]="['/']">
-          <img src="assets/img/logo.png" alt="Home Icon" class="home-icon">
-        </button>
+
+      <div class="footer-top-row">
+          <!-- Logo stays at the top left -->
+          <div class="footer-logo">
+            <button mat-flat-button class="home" [routerLink]="['/']">
+              <img src="assets/img/logo.png" alt="Home Icon" class="home-icon">
+            </button>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+         </div>
+        </div>
       </div>
 
       <!-- Sections -->
@@ -20,19 +33,9 @@
         </ul>
       </div>
 
-      <!-- Social Icons -->
-      <div class="footer-social">
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-      </div>
+      <!-- Copyright -->
+      <p class="footer-copyright">
+        &copy; 2025 Property Quest. All rights reserved.
+      </p>
     </div>
-
-    <!-- Copyright -->
-    <p class="footer-copyright">
-      &copy; 2025 Property Quest. All rights reserved.
-    </p>
-  </div>
 </footer>

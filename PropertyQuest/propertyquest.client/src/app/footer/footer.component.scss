@@ -15,7 +15,17 @@ $primary-color: rgb(0, 21, 36);
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 40px
   }
+
+// New row for home + socials
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
 
   .home {
     display: flex;
@@ -32,14 +42,34 @@ $primary-color: rgb(0, 21, 36);
     }
   }
 
-  .footer-content {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
+.footer-social {
+  display: flex;
+  gap: 15px;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    i {
+      font-size: 25px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 40px;
+  transition: all 0.3s ease;
+}
 
   .sections {
     display: flex;
@@ -48,43 +78,30 @@ $primary-color: rgb(0, 21, 36);
     flex-wrap: wrap;
   }
 
-  .footer-section {
-    flex: 1;
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 40px;
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0px;
 
-    h3 {
-      font-weight: 700;
-      font-size: 15px;
-      text-align: left;
-      cursor: pointer;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: left;
-
-      li a {
-        color: $primary-color;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
+  h3 {
+    font-weight: 700;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
   }
 
-  .footer-social {
-    margin-top: 20px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
 
-    a {
-      margin: 0 10px;
+    li a {
       color: $primary-color;
       text-decoration: none;
 
@@ -92,12 +109,37 @@ $primary-color: rgb(0, 21, 36);
         text-decoration: underline;
       }
     }
+
+    &.active {
+        margin-top: 6px
+    }
   }
-  /* Responsive dropdown style for ≤903px */
+}
+
+// Gradual width adjustment
+@media (max-width: 1280px) {
+  .footer-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer-content {
+    gap: 10px;
+  }
+}
+
   @media (max-width: 1024px) {
+    .footer-top-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+
     .footer-content {
       flex-direction: column;
       align-items: stretch;
+      gap: 0;
     }
 
     .sections {
@@ -108,7 +150,7 @@ $primary-color: rgb(0, 21, 36);
     .footer-section {
       width: 100%;
       border-top: 1px solid rgba(0, 0, 0, 0.2);
-      padding: 10px 0;
+      padding: 0;
 
       h3 {
         display: flex;
